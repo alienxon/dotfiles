@@ -1,4 +1,4 @@
-# bi11u/dotfiles
+# alienxon/dotfiles
 
 <img src="/screenshots/desktop-fuji.png" width=100% />
 
