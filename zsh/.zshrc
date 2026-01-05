@@ -23,14 +23,6 @@ setopt hist_ignore_space
 setopt hist_save_no_dups
 setopt inc_append_history
 
-##alias to run c/c++ -->
-crun(){
-    clang "$1" -o "${1:r}" && ./"${1:r}"
-}
-cpprun(){
-    clang "$1" -o "${1:r}" && ./"${1:r}"
-}
-
 #zsh plugins -->
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
