@@ -39,25 +39,6 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-background-color: transparent;
-
-window#waybar.solo {
-background-color: #FFFFFF;
-}
-
-
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
-*/
-
 button {
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
@@ -82,11 +63,11 @@ button {
 }
 
 #workspaces button.selected {
-    color: @blue;
+    color: @fg;
 }
 
 #workspaces button.active {
-    color: @blue;
+    color: @fg;
 }
 
 #workspaces button.urgent {
@@ -97,11 +78,6 @@ button {
 #battery,
 #network,
 #pulseaudio,
-#mpris,
-#custom-power,
-#custom-colortemp,
-#power-profiles-daemon,
-#privacy,
 #bluetooth {
     padding: 0 3px;
     color: @fg;
@@ -118,24 +94,12 @@ button {
     margin-left: 0px;
 }
 
-#privacy {
-    color: @fg;
-}
-
-#privacy-item.screenshare {
-    color: @red;
-}
-
-#privacy-item.audio-in {
-    color: @red;
-}
-
 #clock {
     color: @fg;
 }
 
 #pulseaudio {
-    color: @purple;
+    color: @fg;
 }
 
 #pulseaudio.muted {
@@ -143,7 +107,7 @@ button {
 }
 
 #network {
-    color: @blue;
+    color: @aqua;
 }
 
 #network.disconnected {
@@ -151,7 +115,7 @@ button {
 }
 
 #battery {
-    color: @green;
+    color: @fg;
 }
 
 #battery.warning:not(.charging) {
@@ -167,18 +131,6 @@ button {
     margin-right: 5px;
 }
 
-#power-profiles-daemon.power-saver{
-    color: @green;
-}
-
-#power-profiles-daemon.balanced{
-    color: @yellow;
-}
-
-#power-profiles-daemon.performance{
-    color: @orange;
-}
-
 #bluetooth {
     color: @aqua;
 }
@@ -187,14 +139,6 @@ button {
     color: @grey0;
 }
 
-#mpris {
-    color: @aqua;
-}
-
-#custom-colortemp {
-    color: @fg;
-}
-
 #custom-seperator {
-    color: @fg;
+    color: @bg4;
 }

@@ -7,19 +7,13 @@
     "margin-right": 10,
     "modules-left": [
         "hyprland/workspaces",
-        "mpris"
     ],
 
     "modules-center": [
-        "custom/colortemp",
-        "clock",
+        "hyprland/window",
     ],
 
     "modules-right": [
-        "privacy",
-        "custom/seperator",
-        "power-profiles-daemon",
-        "custom/seperator",
         "pulseaudio",
         "custom/seperator",
         "bluetooth",
@@ -28,7 +22,7 @@
         "custom/seperator",
         "battery",
         "custom/seperator",
-        "custom/power"
+        "clock",
     ],
 
     "hyprland/window": {
@@ -43,19 +37,34 @@
 
     "clock": {
         "tooltip": false,
-        "format": "󰥔 {:%H:%M   %a, %d %b %Y}",
+        "format": "<span foreground='#d699b6'></span> {:%a, %e %b  <span foreground='#e67e80'>󰥔</span> %H:%M}",
     },
 
     "battery": {
+        "interval": 1,
         "states": {
-            "critical": 15,
-            "warning": 30
+            "good": 95,
+            "warning": 25,
+            "critical": 15
         },
-        "format": "{icon}:{capacity}",
-        "format-icons": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
-        "format-charging": "󰂄:{capacity}",
-        "format-warning": "󰂃:{capacity}",
-        "tooltip": false
+        "format": "{icon} {capacity}%",
+        "format-plugged": "<span foreground='#32302F'></span> {capacity}%",
+        "format-icons": {
+            "default": [
+                "<span foreground='#e69875'></span>",
+                "<span foreground='#e69875'></span>",
+                "<span foreground='#e69875'></span>",
+                "<span foreground='#e69875'></span>",
+                "<span foreground='#e69875'></span>"
+            ],
+            "format-charging": [
+                "", 
+                "", 
+                "", 
+                "", 
+                ""
+            ]
+        }
     },
 
     "network": {
@@ -65,19 +74,6 @@
         "on-click": "~/.local/bin/wifimenu.sh"
     },
 
-    "pulseaudio": {
-        "format": "{icon}:{volume}",
-        "format-icons": {"default": ["", "", ""]},
-        "format-muted": ":0",
-        "on-click": "pavucontrol",
-        "tooltip": false
-    },
-
-    "custom/power": {
-        "format": "",
-        "tooltip": false,
-        "on-click": "sleep 0.25 && ~/.local/bin/powermenu.sh"
-    },
 
     "bluetooth": {
         "format-on": "",
@@ -86,61 +82,21 @@
         "on-click": "kitty -e bluetui"
     },
 
-    "mpris": {
-        "format": "{status_icon} {dynamic}",
-        "interval": 0,
-        "max-length": 30,
-        "status-icons": {
-            "playing": "▶",
-            "paused": "⏸",
-            "stopped": ""
-        },
-        "dynamic-order": ["title", "artist"],
-        "tooltip-format": "{title} - {artist}",
-    },
-
-    "power-profiles-daemon": {
-        "format": "{icon}:{profile}",
-        "tooltip-format": "Power profile:{profile}",
-        "tooltip": false,
-        "format-icons": {
-            "default": "",
-            "performance": "",
-            "balanced": "",
-            "power-saver": ""
-        }
-    },
-
-    "custom/colortemp": {
-        "format": "[󰝩]",
-        "tooltip": false,
-        "on-click": "wlsunset -t 4000 -T 4001",
-        "on-click-right": "pkill wlsunset",
-    },
-
     "custom/seperator": {
-        "format": "|",
+        "format": "",
         "tooltip": false,
     },
 
-    "privacy": {
-	"icon-spacing": 10,
-	"icon-size": 18,
-	"transition-duration": 250,
-	"modules": [
-		{
-			"type": "screenshare",
-			"tooltip": true,
-			"tooltip-icon-size": 24
-		},
-		{
-			"type": "audio-in",
-			"tooltip": true,
-			"tooltip-icon-size": 24
-		}
-	],
-	"ignore-monitor": true,
-},
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "default": [
+            "<span foreground='#7fbbb3'>󰕿</span>",
+            "<span foreground='#7fbbb3'>󰖀</span>",
+            "<span foreground='#7fbbb3'>󰕾</span>",
+            ],
 
-
+        },
+        "on-click": "sleep 0.1 && pavucontrol",
+    },
 }
