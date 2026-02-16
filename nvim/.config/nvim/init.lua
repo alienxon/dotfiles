@@ -31,7 +31,7 @@ require('lazy').setup {
     require 'plugins.autoformat',
     require 'plugins.snacks',
     require 'plugins.vim-tmux-navigator',
-    require 'plugins.render-markdown',
+    --require 'plugins.render-markdown',
   },
   -- Configure any other settings here. See the documentation for more details.
   -- automatically check for plugin updates

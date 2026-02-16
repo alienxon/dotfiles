@@ -15,8 +15,8 @@
 
     "modules-right": [
         "pulseaudio",
-        "custom/seperator",
-        "bluetooth",
+        //"custom/seperator",
+        //"bluetooth",
         "custom/seperator",
         "network",
         "custom/seperator",
@@ -41,7 +41,6 @@
     },
 
     "battery": {
-        "interval": 1,
         "states": {
             "good": 95,
             "warning": 25,

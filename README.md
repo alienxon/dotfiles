@@ -17,8 +17,7 @@ The table below contains all the programs used in this configuration.
 | Font             | [JetBrainsMono](https://www.jetbrains.com/lp/mono/)         |
 | Status Bar       | [Waybar](https://github.com/Alexays/Waybar)                 |
 | Launcher         | [Rofi](https://github.com/davatorium/rofi)                  |
-| File Manager     | [Lf](https://github.com/gokcehan/lf)                        |
+| File Manager     | [Yazi](https://github.com/sxyazi/yazi)                      |
 | Text Editor      | [Neovim](https://github.com/neovim/neovim)                  |
 | Notifications    | [dunst](https://github.com/dunst-project/dunst)             |
-| Lockscreen       | [Hyprlock](https://github.com/hyprwm/hyprlock)              |
 | Cursor           | [Rose-pine](https://github.com/ndom91/rose-pine-hyprcursor) |
