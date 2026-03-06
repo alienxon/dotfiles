@@ -12,7 +12,7 @@ The table below contains all the programs used in this configuration.
 |------------------|-------------------------------------------------------------|
 | Operating System | [Arch Linux](https://archlinux.org/)                        |
 | Window Manager   | [Hyprland](https://hypr.land/)                              |
-| Terminal         | [Kitty](https://github.com/kovidgoyal/kitty)                |
+| Terminal         | [Foot](https://codeberg.org/dnkl/foot)                |
 | Shell            | [Zsh](https://www.zsh.org/)                                 |
 | Font             | [JetBrainsMono](https://www.jetbrains.com/lp/mono/)         |
 | Status Bar       | [Waybar](https://github.com/Alexays/Waybar)                 |

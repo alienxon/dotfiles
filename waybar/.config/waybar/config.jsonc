@@ -15,13 +15,13 @@
 
     "modules-right": [
         "pulseaudio",
-        //"custom/seperator",
+        //"custom/separator",
         //"bluetooth",
-        "custom/seperator",
+        "custom/separator",
         "network",
-        "custom/seperator",
+        "custom/separator",
         "battery",
-        "custom/seperator",
+        "custom/separator",
         "clock",
     ],
 
@@ -37,17 +37,18 @@
 
     "clock": {
         "tooltip": false,
-        "format": "<span foreground='#d699b6'></span> {:%a, %e %b  <span foreground='#e67e80'>󰥔</span> %H:%M}",
+        "format": "<span foreground='#d699b6'></span> {:%a,%e %b  <span foreground='#e67e80'>󰥔</span> %H:%M}",
     },
 
     "battery": {
+        "tooltip": false,
         "states": {
             "good": 95,
             "warning": 25,
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-plugged": "<span foreground='#32302F'></span> {capacity}%",
+        "format-charging": "<span foreground='#e69875'></span> {capacity}%",
         "format-icons": {
             "default": [
                 "<span foreground='#e69875'></span>",
@@ -55,13 +56,6 @@
                 "<span foreground='#e69875'></span>",
                 "<span foreground='#e69875'></span>",
                 "<span foreground='#e69875'></span>"
-            ],
-            "format-charging": [
-                "", 
-                "", 
-                "", 
-                "", 
-                ""
             ]
         }
     },
@@ -81,7 +75,7 @@
         "on-click": "kitty -e bluetui"
     },
 
-    "custom/seperator": {
+    "custom/separator": {
         "format": "",
         "tooltip": false,
     },
@@ -96,6 +90,6 @@
             ],
 
         },
-        "on-click": "sleep 0.1 && pavucontrol",
+        "on-click": "sleep 0.1 && foot wiremix",
     },
 }

@@ -10,7 +10,7 @@ autoload -Uz compinit
 compinit
 
 #end of line -----------------------------------------------------------------------------------
-PROMPT='%F{blue}%1~ %F{green}-> %f'
+PROMPT='%F{blue}%1~ %F{green}--> %f'
 
 #env variables -->
 export EDITOR=nvim

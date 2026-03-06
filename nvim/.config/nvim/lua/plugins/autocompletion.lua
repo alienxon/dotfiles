@@ -29,10 +29,9 @@ return { -- Autocompletion
       },
       opts = {},
     },
-    'folke/lazydev.nvim',
   },
-  --- @module 'blink.cmp'
-  --- @type blink.cmp.Config
+  ---@module 'blink.cmp'
+  ---@type blink.cmp.Config
   opts = {
     keymap = {
       -- 'default' (recommended) for mappings similar to built-in completions
@@ -75,10 +74,7 @@ return { -- Autocompletion
     },
 
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'lazydev' },
-      providers = {
-        lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
-      },
+      default = { 'lsp', 'path', 'snippets' },
     },
 
     snippets = { preset = 'luasnip' },
